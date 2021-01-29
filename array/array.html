@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <script defer>
+        // 배열에 사용할 수 있는 자료형
+        // 모든 자료형을 배열의 요소로 사용 가능 
+        const numbers = [1,2,3,4,5];
+
+        console.log(numbers);
+        // 배열 요소 갯수 확인
+        console.log(numbers.length);
+
+        // 배열 요소 접근
+        console.log(numbers[0]);
+
+        for(let i=0; i < numbers.length; i++){
+            console.log(numbers[i]);
+        }
+
+        // 배열 요소 추가 
+        numbers.push(100);
+        console.log(numbers);
+        numbers[6]=200;
+        console.log(numbers);
+        numbers[10]=200;
+        console.log(numbers);
+
+        // 특정 위치의 배열 삭제 
+        // : array.splice(index, length);
+        const strings=['a','b','c','d','e'];
+        // strings.splice(1,1);
+        // 1번째 요소 1개를 없애라
+       
+
+        // 특정 위치의 배열 삭제 후 추가 
+        // : array.splice(index, length, 요소);
+        // index번째의 length개만큼 없애고, 요소를 추가 
+        strings.splice(1,1,"x");
+        //1번째 요소 1개를 없애고 "x" 를 추가해라
+        // strings.splice(1,0,"x"); 
+        // 하면 1번째 자리에 x가 들어감! 
+
+        console.log(strings);
+
+        // map 메서드 
+        // : 배열에 있는 모든 요소에 특정 기능을 실행시키는 메서드 
+        // cf. fetch_array
+
+        // let numbersSqrt=numbers.map(function(x){
+        //     return x * x;
+            // 요소 하나를 x로 받아서 곱해줌
+
+        // });
+        let numbersSqrt=numbers.map((x)=>x*x);
+
+        console.log(numbersSqrt);
+
+        
+            // 1. 선언적 함수
+        // function sumNum(a,b){
+        //     return a+b;
+        // }
+        
+
+
+            // 2. 익명 함수 
+            // 함수에 이름이 없음. 변수에 저장만 했을 뿐.
+        // let sumNum = function(a,b){
+        //     return a+b;
+        // };
+
+       
+
+            // 3. 화살표 함수
+            // 여러 줄의 정의 코드를 쓸 경우 잘 사용하지 않는다. 
+            // 간단하게 한 줄로 쓸 때 사용/간편한 게 사용 이유 
+        let sumNum=(a,b) =>{return a+b;}    
+
+        console.log(sumNum(5,7));
+
+
+    </script>
+    <!-- head 안에 script 쓰려면 defer 사용 -->
+</head>
+<body>    
+</body>
+</html>
