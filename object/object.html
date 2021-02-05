@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+
+    <script defer>
+        // 객체 : 이름과 값으로 구성된 '속성(property)'을 가진 기본 데이터타입 
+        
+        // [배열]도 객체
+        const abc=function(){};
+
+        console.log(typeof (abc));
+        // ->function
+
+        // 1. 객체는 키와 값을 한 쌍으로 하는 속성
+        // {키 : 값}
+
+        const product={
+            title:'website',
+            type:'web project',
+            regist: "2021-02-05",
+            client: "samsung"
+        };
+
+        // 2. 객체 접근 
+        console.log(product);
+        console.log(product.title);
+        console.log(product["title"]);
+
+
+        // 3. 속성과 메서드 
+        // 메서드(method): 객체의 속성 중 함수 자료형인 속성
+
+        const person={
+            name:"개똥이",
+            go:function(city){
+                return city;
+            },
+        };
+        // console.log(person.name + "는 " +person.go("인천") + "으로 갑니다.");
+
+
+        // 템플릿 문자열 
+        console.log(`${person.name}는 ${person.go('인천')}으로 갑니다.`);
+
+
+        // 파라미터 정리 
+        function controls(a,b){
+            console.log(a);
+            console.log(b);
+        }
+        controls("div","tag");
+
+        const param ={
+            a:"div",
+            b: "tag",
+        };
+
+        function controls1(data){
+            console.log(data.a);
+            console.log(data.b);
+        }
+        controls1(param);
+        // controls1에서 param을 선언
+        // -> param이 선언한 a,b데이터를 끌고 옴
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
