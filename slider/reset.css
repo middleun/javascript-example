@@ -1,0 +1,24 @@
+
+
+/* reset CSS style */
+*{margin:0; padding:0; box-sizing: border-box;}
+
+body{font-size:14px; font-family: 'Montserrat', sans-serif;}
+.clear:after{clear:both; display: block; content: '';}
+.center{width:100%; height:auto; max-width: 980px; margin: auto;}
+ol,ul{list-style: none;}
+a{text-decoration: none; color: #111;}
+img{display: block;}
+button, input, textarea, select{outline: 0; font-family: 'Noto Sans KR'; 
+-webkit-appearance: none; background:#fff; border-radius:0;}
+select{background: url(/myschedule/img/select_arrow.png) no-repeat  95%;background-size:10px 8px;}
+ 
+
+ 
+input[type="checkbox"]{-webkit-appearance: auto;_border-radius:0; border:1px solid #5564DF;}
+input::placeholder,textarea::placeholder{color:#555;}
+/* input:focus,textarea:focus{background:#f8f8f8;} */
+
+/* contents wrap style */
+.wrap{width:100%; height:100vh; background: #fbfbfb; display:flex; justify-content: space-between; align-items: center; flex-direction: column;}
+/* 100vh - 위 아래 다 꽉차게  */
